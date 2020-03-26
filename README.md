@@ -9,7 +9,7 @@ Because debugging is hard, and that the majority of bugs in programs are the res
 * Fix code to get correct logic
 * Return functional code
 * Repeat steps 1 to 5 until done
-* ~~Convince HR to fire the incompetent programmer
+* ~~Convince HR to fire the incompetent programmer~~
 
 # Files in This Repository
 | File Name | Description | Error |
