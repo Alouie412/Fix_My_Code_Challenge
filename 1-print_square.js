@@ -15,9 +15,10 @@ if (process.argv.length <= 2) {
 }
 
 /*
-    The error was here. While parseInt is used correctly to convert a
+    The error is here. While parseInt is used correctly to convert a
     string to an integer, it is converting from a string to a hexadecimal
-    rather than a decimal
+    rather than a decimal. This is why 4 prints out a 4x4 square (which is
+    correct), but 10 prints out a 16x16 square.
 */
 size = parseInt(process.argv[2], 10)
 
