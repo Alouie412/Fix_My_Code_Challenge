@@ -17,8 +17,10 @@ def fizzbuzz(n):
     tmp_result = []
     for i in range(1, n + 1):
         """
-        The error was here: Checked i % 3 before i % 3 and i % 5. As such,
-        the i % 3 and i % 5 conditional will never run. This is now corrected
+        The error is here: Checked i % 3 before i % 3 and i % 5. As such,
+        the i % 3 and i % 5 conditional will never run as all multiples of 15
+        satisfies the i % 3 condition first. This is now corrected
+        by switching the positions of the two if statements
         """
         if (i % 3) == 0 and (i % 5) == 0:
             tmp_result.append("FizzBuzz")
