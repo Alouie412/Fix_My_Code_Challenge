@@ -46,8 +46,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	/*
 	The error is here. The original author connected the nodes
 	incorrectly, resulting in the desired node to be freed to...
-	not behave as expected. Furthermore, the original code had
-	issues with order, so this is fixed.
+	not behave as expected. Originally thought free(*head) must
+	be after setting the link on both sides, but this is actually
+	not needed
 	*/
 	/*
 	(*head)->prev->prev = (*head)->prev;
@@ -57,9 +58,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	*head = saved_head;
 	*/
 	(*head)->prev->next = (*head)->next;
+	free(*head);
 	if ((*head)->next)
 		(*head)->next->prev = (*head)->prev;
-	free(*head);
 	*head = saved_head;
 	}
 	return (1);
