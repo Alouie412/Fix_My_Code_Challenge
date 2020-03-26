@@ -44,8 +44,9 @@ class User():
         else:
             """
             Error 1: self._password instead of self.__password. This results
-            in self.__password still containing None. self._password is never
-            used
+            in self.__password still containing None, causing error messages to happen
+            even when they should not. self._password is never used
+            self._password = hashlib.md5(pwd.encode()).hexdigest().lower()
             """
             self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
 
@@ -65,6 +66,7 @@ class User():
         Error 2: Comparing hash values is fine, but please be consistent. You
         can't compare lowercases with uppercases and expect to return true, because
         they won't
+        return hashlib.md5(pwd.encode()).hexdigest().upper() == self.__password
         """
         return hashlib.md5(pwd.encode()).hexdigest().lower() == self.__password
 
