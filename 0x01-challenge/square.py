@@ -9,7 +9,6 @@ class rect():
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         """ Documentation """
         for key, value in kwargs.items():
