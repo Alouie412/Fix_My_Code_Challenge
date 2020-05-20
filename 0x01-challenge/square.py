@@ -11,7 +11,8 @@ class square():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """ Area of the square
+            Here is the error """
         return self.width * self.height
 
     def PermiterOfMySquare(self):
