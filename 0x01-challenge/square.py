@@ -4,7 +4,7 @@ Docstring
 """
 
 
-class rect():
+class Square():
 
     width = 0
     height = 0
@@ -19,7 +19,7 @@ class rect():
             Here is the error """
         return self.width * self.height
 
-    def PermiterOfMySquare(self):
+    def permiter_of_my_square(self):
         """ Documentation """
         return (self.width * 2) + (self.height * 2)
 
@@ -29,7 +29,7 @@ class rect():
 
 if __name__ == "__main__":
 
-    s = rect(width=12, height=12)
+    s = rect(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
